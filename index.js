@@ -1,0 +1,17 @@
+const express = require("express");
+const mongoose = require("mongoose");
+const userrouter = require("./routes/user-routes");
+const formrouter = require("./routes/form-routes");
+const cookieParser = require("cookie-parser");
+const db = require("./config/dbconnect");
+const cors = require("cors");
+require("dotenv").config();
+const app = express();
+const port = process.env.PORT;
+db();
+app.use(cors({ credentials: true, origin: "http://localhost:3000" }));
+app.use(cookieParser());
+app.use(express.json());
+app.use("/api", userrouter);
+app.use("/api", formrouter);
+app.listen(port, () => console.log(`Server is runnning on port  ${port} 🔥`));
