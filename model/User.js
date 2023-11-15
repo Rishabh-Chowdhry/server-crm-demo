@@ -2,6 +2,9 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
+// Assuming you have a Role model defined
+const Role = require("./path/to/your/role/model");
+
 const userSchema = new Schema({
   firstname: {
     type: String,
@@ -30,6 +33,10 @@ const userSchema = new Schema({
     required: true,
     minlength: 1,
     maxlength: 11,
+  },
+  role: {
+    type: Schema.Types.ObjectId,
+    ref: "Role", // Reference to the Role model
   },
 });
 

@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
-const Permission = require("./model/Permission");
-const db = require("./config/dbconnect");
+const Permission = require("../model/Permission");
+const db = require("../config/dbconnect");
 // Connect to MongoDB
 db();
 // Sample data to seed
