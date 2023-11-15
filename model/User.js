@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 // Assuming you have a Role model defined
-const Role = require("./path/to/your/role/model");
+const Role = require("./Roles");
 
 const userSchema = new Schema({
   firstname: {

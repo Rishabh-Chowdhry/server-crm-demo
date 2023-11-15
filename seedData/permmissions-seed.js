@@ -55,6 +55,5 @@ async function seedData() {
     mongoose.disconnect();
   }
 }
-
 // Call the seedData function
 seedData();
